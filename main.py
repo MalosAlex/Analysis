@@ -31,16 +31,16 @@ for j in range(0, 4):
     t = n // (q+p)  # How many times each p and q have to be executed
     rest = n % (q+p)  # How many operations have remained
     if rest > p:
-        for i in range(t*p+1):
-            result = result + 1/(2 * i + 1)
+        for i in range(t*p + 1):
+            result = result + 1/(2*i + 1)
         rest = rest - p
         for j in range(1, t*q + rest + 1):
-            result = result - 1/(2 * j)
+            result = result - 1/(2*j)
     else:
-        for i in range(t*p+rest+1):
-            result = result + 1 / (2 * i + 1)
-        for j in range(1, t * q + 1):
-            result = result - 1 / (2 * j)
+        for i in range(t*p + rest+1):
+            result = result + 1 / (2*i + 1)
+        for j in range(1, t*q + 1):
+            result = result - 1 / (2*j)
     results.append(result)
     data.append([n, p, q, result, math.exp(result)])
 
