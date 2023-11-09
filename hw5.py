@@ -14,12 +14,12 @@ def f_conv_der(x):
 
 
 def f_non_conv(x):
-    fun = -1 * x ** 3
+    fun = 2 * x ** 3 - 8 * x
     return fun
 
 
 def f_non_der(x):
-    return -3 * x ** 2
+    return 6 * x ** 2 - 8
 
 
 # for conv
